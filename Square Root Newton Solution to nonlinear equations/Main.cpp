@@ -8,15 +8,15 @@ short int onOff;
 
 void Calculate()
 {
-	cout << "Si inserisca un valore di cui si vuol trovare la radice quadrata" << endl;
+	cout << "Insert a number and I'll find his square root" << endl;
 	int x;
 	cin >> x;
-	cout << "Si inserisca ora l'errore tollerato con virgola mobile o intero" << endl;
+	cout << "Insert now the error tolerance with decimal numbers or integers" << endl;
 	double tolleranza;
 	cin >> tolleranza;
 	double  RQ = nsqrt(x, tolleranza);
-	cout << "La radice quadrata di: " << x << "e': " << RQ << endl;
-	cout << "Premi 0 ed invia per uscire oppure premi 1 ed invia per ricalcolare" << endl;
+	cout << "The square root of: " << x << "is: " << RQ << endl;
+	cout << "Press 0 and enter to exit or press 1 and enter to retry" << endl;
 	cin >> onOff;
 
 
