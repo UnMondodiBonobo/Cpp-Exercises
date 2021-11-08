@@ -8,7 +8,6 @@ double nsqrt(double x, double epsilon)
 
 	do 
 	{
-
 		s = ((s * s) + x) / (2 * s);
 
 	} while (abs((s*s)-x) >= epsilon);
