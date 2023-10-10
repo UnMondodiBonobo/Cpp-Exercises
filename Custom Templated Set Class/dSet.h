@@ -6,14 +6,14 @@
 #include <stddef.h>
 
 /**
-@brief Classe set non ordinato
+@brief Unordered set class
 
-La classe implementa un set generico di elementi T
-dove m_size rappresenta la massima grandezza del set,
-m_elements il numero di elementi presenti all'interno
-del set e m_set il puntatore all'effettivo array di elementi.
-Il funtore Eql confronta due valori e ritorna vero o falso
-se i valori sono ripettivamente uguali e differenti tra loro.
+This class implements a generic set of elements of type T. 
+Where m_size represents the maximum size of the set, 
+m_elements the number of elements present inside the set, 
+and m_set is a pointer to the actual array of elements. 
+The functor Eql compares two values and returns true or false 
+if the values are respectively equal or different from each other.
 */
 
 
@@ -36,7 +36,7 @@ private:
 public:
 
 	/**
-	@brief Costruttore di default
+	@brief Default Constructor
 
 	@post m_size = 0
 	@post m_elements = 0
@@ -47,13 +47,13 @@ public:
 	{}
 
 	/**
-	Costruttore secondario, elements è inizializzato a 0
-
-    @param m_size massima grandezza del set
-
-    @post m_size = size
-    @post m_set = new value_type[size]
-    @post m_elements = 0
+	Secondary constructor, elements is initialized to 0.
+	
+	    @param m_size maximum size of the set
+	
+	    @post m_size = size
+	    @post m_set = new value_type[size]
+	    @post m_elements = 0
 	*/
 	explicit dSet(size_type size):  m_size(0), m_set(nullptr), m_elements(0)
 	{
@@ -66,9 +66,9 @@ public:
 
 
 	/**
-	Costruttore di copia
+	Copy constructor
 
-	@param other Set da copiare
+	@param other Set to copy
 	*/
 	dSet(const dSet& other) :  m_size(0), m_set(nullptr), m_elements(0)
 	{
@@ -96,16 +96,15 @@ public:
 	}
 
 	/**
-	@brief Costruttore con coppia di iteratori
-
-	Cotruttore che crea un dSet ed aggiunge gli elementi 
-	presi dall'iteratore di inizio che scorre tutto l'array passato
-	(Può chiamare resize() se il dSet ha size = elements e l'eccezione
-	è gestita direttamente da resize())
-
-	@param bg Iteratore di inizio
-	@param ed Iteratore di fine
-
+	@brief Constructor with a pair of iterators
+	
+	Constructor that creates a dSet and adds elements taken from the
+	beginning iterator that traverses the entire passed array.
+	(It may call resize() if dSet has size = elements, and the exception
+	is directly handled by resize())
+	
+	@param bg Beginning iterator
+	@param ed End iterator
 	*/
 
 	template <typename Q>
